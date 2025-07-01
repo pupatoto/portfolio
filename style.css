@@ -1,0 +1,491 @@
+/* ตั้งค่าพื้นฐาน */
+* {
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000102;
+}
+
+header {
+  background-color: #000000;
+  padding: 0.5rem;
+}
+
+.logo-pic {
+  width: 60px;
+  height: 60px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  flex-wrap: nowrap;
+}
+
+/* เมนูนำทาง */
+nav {
+  margin-left: 50rem;
+  flex-wrap: nowrap;
+  display: flex;
+}
+
+nav a {
+  color: white;
+  margin: 0 3rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-family: 'Prompt', sans-serif;
+  white-space: nowrap;
+  display: flex;
+}
+
+nav a:hover {
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: nowrap; 
+  gap: 1rem; 
+}
+
+/* Section ทั่วไป */
+section {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.aboutme {
+  background: linear-gradient(to right, #101010, #1f1e1e);
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+  white-space: nowrap;
+}
+
+.aboutmeTitle {
+  font-family: 'Prompt', sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  color: white;
+  transform: translateX(-20px);
+  opacity: 0;
+  animation: slideIn 1.2s ease-out forwards;
+}
+
+.profileBackground {
+  background: linear-gradient(to right, #101010, #1f1e1e);
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.colorUni {
+  color: #2ecc71
+}
+
+.aboutmeContent {
+  font-family: 'Prompt', sans-serif;
+  color: #fff;
+  transform: translateX(-20px);
+  opacity: 0;
+  animation: slideIn 1.2s ease-out forwards;
+  white-space: nowrap;
+}
+
+.profile-pic {
+  width: 220px;
+  height: 230px;
+}
+
+.rowProfile {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ส่วนโปรเจกต์ */
+.projectTitle {
+  font-family: 'Prompt', sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  color: white;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+.project {
+  background: linear-gradient(to right, #101010, #1f1e1e);
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem;
+  max-width: 350px;
+  width: 100%;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+.rowProject {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project h3 {
+  margin-bottom: 0.5rem;
+}
+
+.profileBackground {
+  background: linear-gradient(to right, #101010, #1f1e1e);
+  border-radius: 10px;
+  width: 220px;
+  height: 220px;
+  margin-right: 1rem;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+.projectContent {
+  font-family: 'Prompt', sans-serif;
+  color: #fff;
+}
+
+.findMyFriendsLogo {
+  width: 250px;
+  height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ReportMission {
+  width: 300px;
+  height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.AmazeSupport {
+  width: 300px;
+  height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tag {
+  background: linear-gradient(to right, #969696, #1f1e1e);
+  padding: 4px 6px;
+  margin: 4px;
+  border-radius: 12px;
+  display: inline-block;
+  border: none;
+  box-shadow: none;
+  color: #fff;
+  font-family: 'Prompt', sans-serif;
+}
+
+.project:hover .projectContent {
+  color: #2ecc71;
+}
+
+.project:hover .tag {
+  background: #2ecc71;
+  color: white;
+  /* เปลี่ยนสีตัวอักษรให้เห็นชัด */
+}
+/* ลิงก์ใน section ติดต่อ */
+#contact a {
+  color: #eeee;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  color: #2ecc71;
+}
+
+.contactTitle {
+  font-family: 'Prompt', sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  color: white;
+}
+
+
+.contactContent {
+  font-family: 'Prompt', sans-serif;
+  color: white;
+}
+
+.rowLogo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.rowLogo img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #000000;
+  color: white;
+  font-size: 0.9rem;
+}
+
+
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.3s;
+}
+
+.delay-2 {
+  animation-delay: 0.6s;
+}
+
+.timeline {
+  position: relative;
+  margin-left: 20px;
+  padding-left: 20px;
+  border-left: 2px dashed #2ecc71;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+.checkpoint {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.checkpoint::before {
+  content: '';
+  position: absolute;
+  left: -30px;
+  width: 15px;
+  height: 15px;
+  background-color: #2ecc71;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.date {
+  display: inline-block;
+  background: linear-gradient(to right, #969696, #1f1e1e);
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  font-family: 'Prompt', sans-serif;
+  color: white;
+}
+
+.title {
+  font-family: 'Prompt', sans-serif;
+  color: white;
+  font-size: 1.4rem;
+  margin: 6px 0;
+}
+
+.content {
+  font-family: 'Prompt', sans-serif;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.reportMissionMain {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  margin-top: 10px;
+  animation: fadeIn 2s ease-in-out forwards;
+  white-space: nowrap;
+}
+.reportMissionMain img {
+  width: 1040px;
+  height: 540px;
+}
+
+.reportMissionTitle {
+  color:#fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Prompt', sans-serif;
+  font-weight: bold;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+.reportMissionContent {
+  color:#fff;
+  font-family: 'Prompt', sans-serif;
+  white-space: nowrap;
+}
+
+.colorGosoft {
+  color: #e74c3c ;
+  font-family: 'Prompt', sans-serif;
+}
+
+.reportMissionContentCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+.amazeSupportTitle {
+  color:#fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Prompt', sans-serif;
+  font-weight: bold;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+.amazeSupportContent {
+  color:#fff;
+  font-family: 'Prompt', sans-serif;
+  white-space: nowrap;
+}
+
+.AmazeSupportImg {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  margin-top: 10px;
+  animation: fadeIn 2s ease-in-out forwards;
+  white-space: nowrap;
+}
+
+.AmazeSupportImg img {
+  width: 890px;
+  height: 500px;
+}
+
+.amazeSupportContentCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+.findImg img {
+  width: 250px;
+  height: 545px;
+  margin-right: 10px;
+}
+
+.findRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  animation: fadeIn 2s ease-in-out forwards;
+  white-space: nowrap;
+}
+
+.findMyFriendsTitle {
+  color:#fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Prompt', sans-serif;
+  font-weight: bold;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+.findMyFriendsContentCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+.findMyFriendsContent {
+  color:#fff;
+  font-family: 'Prompt', sans-serif;
+  white-space: nowrap;
+}
+
+.findGitHub {
+  background: linear-gradient(to right, #101010, #1f1e1e);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  max-width: 150px;
+  width: 100%;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+.gitHubLogo {
+  width : 50px ;
+  height: 50px;
+}
+
+.findGitTitle a{
+  font-family: 'Prompt', sans-serif;
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.findGitHub:hover .findGitTitle a{
+  color: #2ecc71;
+}
+
+.rowFindGit {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
