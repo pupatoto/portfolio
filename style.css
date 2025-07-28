@@ -145,7 +145,7 @@ nav a:hover {
     padding: 0 1rem;
 }
 
-.amazeSupportContentCenter {
+  .amazeSupportContentCenter {
     display: flex;
     justify-content: center;
     align-items: center;
