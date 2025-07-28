@@ -136,6 +136,25 @@ nav a:hover {
     max-height: 400px;
   }
 
+  .reportMissionContentCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+    padding: 0 1rem;
+}
+
+.amazeSupportContentCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+    padding: 0 1rem;
+}
+
+
 }
 
 @media (max-width: 1200px) {
