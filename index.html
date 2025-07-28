@@ -13,8 +13,9 @@
 <body>
   <header>
     <div class="row">
-      <img src="img/Logo.png" class="logo-pic">
-      <nav class="menu">
+      <img src="img/Logo.png" class="logo-pic" onclick="window.location.href='index.html'">
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      <nav id="navbar">
         <a href="#about">Home</a>
         <a href="#about">About me</a>
         <a href="#projects">Portfolio</a>
@@ -22,6 +23,14 @@
       </nav>
     </div>
   </header>
+  <script>
+    function toggleMenu() {
+      const navbar = document.getElementById("navbar");
+      navbar.classList.toggle("show");
+    }
+
+
+  </script>
 
   <section id="about">
     <div class="rowProfile">
@@ -55,7 +64,7 @@
       <div class="checkpoint">
         <div class="date">2025</div>
         <div class="title">Gosoft (Thailand) Co., Ltd.</div>
-        <div class="content">  Software Engineer Trainee</div>
+        <div class="content"> Software Engineer Trainee</div>
       </div>
 
     </div>
@@ -75,7 +84,7 @@
       </div>
 
       <div class="project" onclick="window.location.href='reportmission.html'">
-        <img src="img/Reportmission.png" class="ReportMission"> 
+        <img src="img/Reportmission.png" class="ReportMission">
         <h3 class="projectContent">Report Mission 7APP</h3>
         <div>
           <span class="tag">NextJS</span>
@@ -84,7 +93,7 @@
       </div>
 
       <div class="project" onclick="window.location.href='amazesupport.html'">
-        <img src="img/AmazeSupport.png" class="AmazeSupport"> 
+        <img src="img/AmazeSupport.png" class="AmazeSupport">
         <h3 class="projectContent">Amaze Support</h3>
         <div>
           <span class="tag">NextJS</span>
@@ -99,7 +108,8 @@
     <h2 class="contactTitle">CONTACT</h2>
     <div class="rowLogo">
       <img src="img/gmail.png">
-      <p class="contactContent"><a href="https://mail.google.com/mail/?view=cm&to=teeratep.yimyoo@gmail.com"> teeratep.yimyoo@gmail.com</a></p>
+      <p class="contactContent"><a href="https://mail.google.com/mail/?view=cm&to=teeratep.yimyoo@gmail.com">
+          teeratep.yimyoo@gmail.com</a></p>
     </div>
     <div class="rowLogo">
       <img src="img/github.png">

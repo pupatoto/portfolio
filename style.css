@@ -20,16 +20,15 @@ header {
 
 .row {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  margin-left: 1rem;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 /* เมนูนำทาง */
 nav {
-  margin-left: 50rem;
-  flex-wrap: nowrap;
   display: flex;
+  gap: 2rem;
 }
 
 nav a {
@@ -38,8 +37,6 @@ nav a {
   text-decoration: none;
   font-size: 0.9rem;
   font-family: 'Prompt', sans-serif;
-  white-space: nowrap;
-  display: flex;
 }
 
 nav a:hover {
@@ -47,10 +44,105 @@ nav a:hover {
   font-weight: bold;
 }
 
-.menu {
-  display: flex;
-  flex-wrap: nowrap; 
-  gap: 1rem; 
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+/* responsive style */
+@media (max-width: 900px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .rowProfile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .aboutmeTitle {
+    font-size: 1.5rem;
+  }
+
+  .profile-pic {
+    width: 150px;
+  }
+
+  .aboutme {
+    padding: 0 1rem;
+  }
+
+
+}
+
+@media (max-width: 1100px) {
+  .findImg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .findMyFriendsContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+    padding: 0 1rem;
+  }
+
+  .reportMissionMain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    animation: fadeIn 2s ease-in-out forwards;
+    flex-direction: column;
+  }
+
+  .reportMissionMain img {
+    max-width: 500px;
+    max-height: 400px;
+  }
+
+  .AmazeSupportImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    animation: fadeIn 2s ease-in-out forwards;
+    flex-direction: column;
+  }
+
+  .AmazeSupportImg img {
+    max-width: 500px;
+    max-height: 400px;
+  }
+
+}
+
+@media (max-width: 1200px) {
+  .rowProject {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /* Section ทั่วไป */
@@ -68,7 +160,6 @@ section {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   opacity: 0;
   animation: fadeIn 2s ease-in-out forwards;
-  white-space: nowrap;
 }
 
 .aboutmeTitle {
@@ -83,6 +174,7 @@ section {
 
 .profileBackground {
   background: linear-gradient(to right, #101010, #1f1e1e);
+  flex-shrink: 0;
   border-radius: 10px;
   padding: 1rem;
   margin: 1rem 0;
@@ -116,7 +208,7 @@ section {
   transform: translateX(-20px);
   opacity: 0;
   animation: slideIn 1.2s ease-out forwards;
-  white-space: nowrap;
+
 }
 
 .profile-pic {
@@ -126,7 +218,9 @@ section {
 
 .rowProfile {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+
 }
 
 /* ส่วนโปรเจกต์ */
@@ -217,6 +311,7 @@ section {
   color: white;
   /* เปลี่ยนสีตัวอักษรให้เห็นชัด */
 }
+
 /* ลิงก์ใน section ติดต่อ */
 #contact a {
   color: #eeee;
@@ -340,18 +435,18 @@ footer {
 .reportMissionMain {
   display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   margin-top: 10px;
   animation: fadeIn 2s ease-in-out forwards;
-  white-space: nowrap;
 }
+
 .reportMissionMain img {
   width: 1040px;
   height: 540px;
 }
 
 .reportMissionTitle {
-  color:#fff;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -361,13 +456,12 @@ footer {
 }
 
 .reportMissionContent {
-  color:#fff;
+  color: #fff;
   font-family: 'Prompt', sans-serif;
-  white-space: nowrap;
 }
 
 .colorGosoft {
-  color: #e74c3c ;
+  color: #e74c3c;
   font-family: 'Prompt', sans-serif;
 }
 
@@ -380,7 +474,7 @@ footer {
 }
 
 .amazeSupportTitle {
-  color:#fff;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -390,18 +484,18 @@ footer {
 }
 
 .amazeSupportContent {
-  color:#fff;
+  color: #fff;
   font-family: 'Prompt', sans-serif;
-  white-space: nowrap;
+
 }
 
 .AmazeSupportImg {
   display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   margin-top: 10px;
   animation: fadeIn 2s ease-in-out forwards;
-  white-space: nowrap;
+
 }
 
 .AmazeSupportImg img {
@@ -429,11 +523,11 @@ footer {
   justify-content: center;
   margin-top: 10px;
   animation: fadeIn 2s ease-in-out forwards;
-  white-space: nowrap;
+
 }
 
 .findMyFriendsTitle {
-  color:#fff;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -451,9 +545,8 @@ footer {
 }
 
 .findMyFriendsContent {
-  color:#fff;
+  color: #fff;
   font-family: 'Prompt', sans-serif;
-  white-space: nowrap;
 }
 
 .findGitHub {
@@ -466,12 +559,13 @@ footer {
   width: 100%;
   animation: fadeIn 2s ease-in-out forwards;
 }
+
 .gitHubLogo {
-  width : 50px ;
+  width: 50px;
   height: 50px;
 }
 
-.findGitTitle a{
+.findGitTitle a {
   font-family: 'Prompt', sans-serif;
   color: white;
   font-size: 14px;
@@ -479,7 +573,7 @@ footer {
   font-weight: bold;
 }
 
-.findGitHub:hover .findGitTitle a{
+.findGitHub:hover .findGitTitle a {
   color: #2ecc71;
 }
 
@@ -488,4 +582,3 @@ footer {
   align-items: center;
   margin-bottom: 0.5rem;
 }
-
